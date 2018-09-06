@@ -1,8 +1,11 @@
 /* INSTRUCTIONS */
-// Comment out line 7 for the Async exercises
-// Comment out line 28 for the Callbacks exercises
-// Comment out line XX for the Promises exercises
-// Comment out line XX for the Promises pt 2 exercises
+// Un|comment out line 10 for the Async exercises
+// Un|comment out line 33 for the Callbacks exercises
+// Un|comment out line 79 for the Promises exercises
+// Un|comment out line 106 for the Promise chaining exercises
+
+
+
 
 /*
 // Async: Now and later
@@ -22,7 +25,9 @@ function productOfFour(n) {
 setTimeout(() => {
     productOfFour(num);
 }, 2000);
+
 /**/
+
 
 
 /*
@@ -70,6 +75,8 @@ function done() {
 
 /**/
 
+
+/*
 // Promises
 let amIHungry = false;
 
@@ -91,3 +98,45 @@ let orderChickenSandwich = new Promise((resolve, reject) => {
         .then((sammie) => console.log(sammie))
         .catch((notHungryError) => console.error(notHungryError));
 })();
+
+/**/
+
+
+
+// /*
+// Chaining Promises
+let num = 1;
+
+let resolveNum = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve(num);
+    }, 2000);
+})
+    .then((num) => num * 2)
+    .then((num) => num * 4)
+    .then((num) => num * 6)
+    .then((num) => console.log(num));
+
+// // Chaining promises with logging each step
+// let num = 1;
+
+// let resolveNum = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         console.log(num);
+//         resolve(num);
+//     }, 2000);
+// })
+//     .then((num) => {
+//         console.log(num * 2);
+//         return num * 2;
+//     })
+//     .then((num) => {
+//         console.log(num * 4);
+//         return num * 4;
+//     })
+//     .then((num) => {
+//         console.log(num * 6);
+//         return num * 6;
+//     });
+
+/**/
